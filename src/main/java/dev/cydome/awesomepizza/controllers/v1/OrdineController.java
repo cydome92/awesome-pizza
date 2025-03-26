@@ -1,4 +1,4 @@
-package dev.cydome.awesomepizza.controllers;
+package dev.cydome.awesomepizza.controllers.v1;
 
 import dev.cydome.awesomepizza.controllers.dto.OrdineDto;
 import dev.cydome.awesomepizza.dao.model.enumerator.Stato;
@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/v1/ordini")
-public class OrdineControllerV1 {
+public class OrdineController {
 
     private final OrdineService service;
 
-    public OrdineControllerV1(OrdineService service) {
+    public OrdineController(OrdineService service) {
         this.service = service;
     }
 

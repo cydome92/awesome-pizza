@@ -1,4 +1,4 @@
-package dev.cydome.awesomepizza.controllers;
+package dev.cydome.awesomepizza.controllers.v1;
 
 import dev.cydome.awesomepizza.controllers.dto.PizzaDto;
 import dev.cydome.awesomepizza.service.PizzaService;

@@ -10,6 +10,9 @@ import dev.cydome.awesomepizza.exception.OrdineNotFoundException;
 import dev.cydome.awesomepizza.exception.StatoOrdineConflictException;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+
 @Service
 public class OrdineService {
 
@@ -30,7 +33,7 @@ public class OrdineService {
     public OrdineDto insertOrdine(OrdineDto ordine) {
         var pizza = pizzaRepository.findById(ordine.pizza().id())
                 .orElseThrow(MissingPizzaException::new);
-        var model = new OrdineModel(null, null, null, Stato.ATTESA, pizza);
+        var model = new OrdineModel(null, LocalDateTime.now(ZoneId.of("Europe/Rome")), null, Stato.ATTESA, pizza);
         return repository.save(model)
                 .toDto();
     }
