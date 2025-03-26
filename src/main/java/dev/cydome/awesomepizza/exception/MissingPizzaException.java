@@ -1,4 +1,4 @@
-package dev.cydome.awsomepizza.exception;
+package dev.cydome.awesomepizza.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

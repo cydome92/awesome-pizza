@@ -1,8 +1,8 @@
-package dev.cydome.awsomepizza.service;
+package dev.cydome.awesomepizza.service;
 
-import dev.cydome.awsomepizza.controllers.dto.PizzaDto;
-import dev.cydome.awsomepizza.dao.model.PizzaModel;
-import dev.cydome.awsomepizza.dao.repository.PizzaRepository;
+import dev.cydome.awesomepizza.controllers.dto.PizzaDto;
+import dev.cydome.awesomepizza.dao.model.PizzaModel;
+import dev.cydome.awesomepizza.dao.repository.PizzaRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package dev.cydome.awsomepizza;
+package dev.cydome.awesomepizza;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

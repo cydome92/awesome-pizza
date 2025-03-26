@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>dev.cydome</groupId>
-	<artifactId>awsomepizza</artifactId>
+	<artifactId>awesomepizza</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>awsomepizza</name>
+	<name>awesomepizza</name>
 	<description>test-project</description>
 	<properties>
 		<java.version>21</java.version>

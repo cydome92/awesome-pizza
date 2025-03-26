@@ -1,6 +1,6 @@
-package dev.cydome.awsomepizza.dao.model;
+package dev.cydome.awesomepizza.dao.model;
 
-import dev.cydome.awsomepizza.controllers.dto.PizzaDto;
+import dev.cydome.awesomepizza.controllers.dto.PizzaDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

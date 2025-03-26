@@ -1,6 +1,6 @@
-package dev.cydome.awsomepizza.controllers.dto;
+package dev.cydome.awesomepizza.controllers.dto;
 
-import dev.cydome.awsomepizza.dao.model.enumerator.Stato;
+import dev.cydome.awesomepizza.dao.model.enumerator.Stato;
 import jakarta.annotation.Nonnull;
 
 import java.time.LocalDateTime;

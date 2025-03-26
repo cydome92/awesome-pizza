@@ -1,13 +1,14 @@
-package dev.cydome.awsomepizza.dao.model;
+package dev.cydome.awesomepizza.dao.model;
 
-import dev.cydome.awsomepizza.controllers.dto.OrdineDto;
-import dev.cydome.awsomepizza.dao.model.enumerator.Stato;
+import dev.cydome.awesomepizza.controllers.dto.OrdineDto;
+import dev.cydome.awesomepizza.dao.model.enumerator.Stato;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 
 import java.time.LocalDateTime;
 
@@ -23,6 +24,8 @@ public class OrdineModel {
     private Integer id;
     @CreatedDate
     private LocalDateTime dataOraInserimento;
+    @LastModifiedDate
+    private LocalDateTime dataOraCompletamento;
     @Enumerated(EnumType.STRING)
     private Stato stato;
     @ManyToOne

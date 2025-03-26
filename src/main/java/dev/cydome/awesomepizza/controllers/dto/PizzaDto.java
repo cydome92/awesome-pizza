@@ -1,4 +1,4 @@
-package dev.cydome.awsomepizza.controllers.dto;
+package dev.cydome.awesomepizza.controllers.dto;
 
 import java.util.List;
 

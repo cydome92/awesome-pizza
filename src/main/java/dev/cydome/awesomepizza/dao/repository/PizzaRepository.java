@@ -1,6 +1,6 @@
-package dev.cydome.awsomepizza.dao.repository;
+package dev.cydome.awesomepizza.dao.repository;
 
-import dev.cydome.awsomepizza.dao.model.PizzaModel;
+import dev.cydome.awesomepizza.dao.model.PizzaModel;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.EntityGraph;

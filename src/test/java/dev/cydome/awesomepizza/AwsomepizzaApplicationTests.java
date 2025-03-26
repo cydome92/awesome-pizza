@@ -1,4 +1,4 @@
-package dev.cydome.awsomepizza;
+package dev.cydome.awesomepizza;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
