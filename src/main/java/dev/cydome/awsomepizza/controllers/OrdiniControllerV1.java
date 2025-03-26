@@ -1,4 +1,4 @@
-package dev.cydome.awsomepizza.controllers.dto;
+package dev.cydome.awsomepizza.controllers;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
