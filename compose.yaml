@@ -1,0 +1,15 @@
+services:
+  mysql:
+    image: 'mysql:9.2.0'
+    environment:
+      - 'MYSQL_DATABASE=aws_pizza'
+      - 'MYSQL_PASSWORD=psw'
+      - 'MYSQL_ROOT_PASSWORD=psw'
+      - 'MYSQL_USER=user'
+    ports:
+      - '3306'
+    volumes:
+      - db:/var/lib/mysql/data
+
+volumes:
+  db:
