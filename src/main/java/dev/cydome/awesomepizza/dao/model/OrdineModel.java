@@ -12,6 +12,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 
 import java.time.LocalDateTime;
 
+@Entity
 @Table(name = "ordini")
 @AllArgsConstructor
 @NoArgsConstructor
