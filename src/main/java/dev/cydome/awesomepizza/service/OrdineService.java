@@ -8,12 +8,11 @@ import dev.cydome.awesomepizza.dao.repository.PizzaRepository;
 import dev.cydome.awesomepizza.exception.MissingPizzaException;
 import dev.cydome.awesomepizza.exception.OrdineNotFoundException;
 import dev.cydome.awesomepizza.exception.StatoOrdineConflictException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-
 @Service
+@Slf4j
 public class OrdineService {
 
     private final OrdineRepository repository;
@@ -33,7 +32,7 @@ public class OrdineService {
     public OrdineDto insertOrdine(OrdineDto ordine) {
         var pizza = pizzaRepository.findById(ordine.pizza().id())
                 .orElseThrow(MissingPizzaException::new);
-        var model = new OrdineModel(null, LocalDateTime.now(ZoneId.of("Europe/Rome")), null, Stato.ATTESA, pizza);
+        var model = new OrdineModel(null, null, null, Stato.ATTESA, pizza);
         return repository.save(model)
                 .toDto();
     }
@@ -48,6 +47,9 @@ public class OrdineService {
     }
 
     public void deleteOrdine(int ordineId) {
+        var ordine = repository.findById(ordineId)
+                .orElseThrow(OrdineNotFoundException::new);
+        log.info("deleted ordine: {}", ordine);
         repository.deleteById(ordineId);
     }
 

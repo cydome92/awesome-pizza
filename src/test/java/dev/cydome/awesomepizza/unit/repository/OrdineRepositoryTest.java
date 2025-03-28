@@ -32,9 +32,11 @@ class OrdineRepositoryTest {
 		ordine.setStato(Stato.ATTESA);
 		ordine.setPizza(pizza);
 		entityManager.persist(ordine);
-		assertFalse(repository.findFirstByOrderByDataOraInserimentoDesc().isEmpty());
+		var rs = repository.findFirstByOrderByDataOraInserimentoDesc();
+		assertFalse(rs.isEmpty());
 		repository.deleteAll();
 		assertTrue(repository.findAll().isEmpty());
+
 	}
 
 }

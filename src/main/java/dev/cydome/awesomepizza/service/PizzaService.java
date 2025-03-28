@@ -17,7 +17,7 @@ public class PizzaService {
     }
 
     public Page<PizzaDto> getPizze(Pageable pageRequest) {
-        return repository.findAll(pageRequest)
+        return repository.findBy(pageRequest)
                 .map(PizzaModel::toDto);
     }
 
