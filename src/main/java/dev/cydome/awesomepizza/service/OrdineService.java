@@ -11,6 +11,8 @@ import dev.cydome.awesomepizza.exception.StatoOrdineConflictException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+
 @Service
 @Slf4j
 public class OrdineService {
@@ -32,7 +34,7 @@ public class OrdineService {
     public OrdineDto insertOrdine(OrdineDto ordine) {
         var pizza = pizzaRepository.findById(ordine.pizza().id())
                 .orElseThrow(MissingPizzaException::new);
-        var model = new OrdineModel(null, null, null, Stato.ATTESA, pizza);
+        var model = new OrdineModel(null, LocalDateTime.now(), null, Stato.ATTESA, pizza);
         return repository.save(model)
                 .toDto();
     }
@@ -43,6 +45,8 @@ public class OrdineService {
         if (ordine.getStato().equals(Stato.COMPLETATO))
             throw new StatoOrdineConflictException();
         ordine.setStato(stato);
+        if (stato.equals(Stato.COMPLETATO))
+            ordine.setDataOraCompletamento(LocalDateTime.now());
         repository.save(ordine);
     }
 
