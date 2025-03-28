@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Import;
 
 @Import(TestcontainersConfiguration.class)
 @SpringBootTest(useMainMethod = SpringBootTest.UseMainMethod.ALWAYS)
-class AwsomepizzaApplicationTests {
+class AwesomepizzaApplicationTests {
 
 	@Test
 	void contextLoads() {
